@@ -1,0 +1,314 @@
+body {
+  font-family: 0;
+  margin: 0;
+  padding: 0;
+  min-height: 200vh; /* Para generar scroll en la página principal */
+}
+
+/* Botón del Menú Flotante */
+.menu-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  z-index: 1000;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #333;
+  transition: all 0.3s ease;
+}
+
+.menu-toggle.active span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+/* Menú Flotante */
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(2px); /* Quitado para mejor compatibilidad */
+  transform: translateX(100%);
+  transition: transform 0.5s ease;
+  z-index: 999;
+  padding-top: 60px;
+  overflow-y: auto; /* Habilita el scroll vertical */
+  box-sizing: border-box; /* Asegura que el padding no afecte al ancho total */
+}
+
+.menu.active {
+  transform: translateX(0);
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul li {
+  padding: 15px 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+}
+/* Media Query para Dispositivos Móviles */
+@media (max-width: 768px) {
+  .menu {
+    width: 90%; /* Ocupa más espacio en móviles */
+    height: 100vh;
+    padding-top: 50px;
+  }
+
+  .menu-toggle {
+    top: 15px;
+    right: 15px;
+  }
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 200vh;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Estilos para el tema claro (por defecto) */
+body {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Estilos para el tema oscuro */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+/* Botón del Menú Flotante (hamburguesa) */
+.menu-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 1000;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    transition: all 0.3s ease;
+}
+
+/* Cambia el color de las líneas en tema oscuro */
+body.dark-mode .menu-toggle span {
+    background-color: #9400D3; /* Violeta fluorescente */
+}
+
+/* Animación del botón (ajustado para que funcione bien en ambos temas) */
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+/* Menú Flotante */
+.menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    transform: translateX(100%);
+    transition: transform 0.5s ease, background-color 0.3s, border-radius 0.3s, box-shadow 0.3s, border 0.3s;
+    z-index: 999;
+    padding-top: 60px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    border-radius: 20px; /* Aumenta el radio para un estilo más macOS */
+    box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.3); /* Sombra a la izquierda y abajo */
+    border-left: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido horizontalmente */
+}
+
+/* Estilo para el tema oscuro del menú */
+body.dark-mode .menu {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-left: 2px solid #9400D3;
+    box-shadow: -5px 5px 15px rgba(148, 0, 211, 0.2);  /*Sombra violeta */
+}
+
+/* Estilos para el título y subtítulo */
+.menu h1, .menu p { /* Aplica a ambos elementos */
+    text-align: center;
+    margin: 0.5em 0; /* Ajusta el margen vertical */
+    width: 100%; /* Asegura que ocupen todo el ancho */
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 80%; /* Reduce el ancho de la lista */
+    box-sizing: border-box; /* Incluye el padding y border en el ancho */
+}
+
+.menu ul li {
+    padding: 0;
+    margin: 5px 0;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px 20px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+/* Estilos para el tema oscuro de los "botones" */
+body.dark-mode .menu ul li a {
+    color: #e0e0e0;
+    border-color: #9400D3;
+}
+
+/* Estilo al pasar el mouse por encima */
+.menu ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Un ligero fondo al pasar el mouse */
+}
+
+body.dark-mode .menu ul li a:hover {
+  background-color: rgba(148, 0, 211, 0.1); /* Un ligero fondo violeta al pasar el mouse */
+}
+
+/* Botón de cambio de tema (solecito) */
+#theme-toggle {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 28px; /* Regresa al tamaño original del solecito */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    color: #777;
+    transition: color 0.3s, transform 0.5s ease-in-out;
+    /* Elimina la sombra del solecito */
+    box-shadow: none;
+    border-radius: 50%;
+    margin: 20px auto;
+    z-index: 1001;
+}
+
+#theme-toggle:hover {
+    color: #ccc;
+    transform: scale(1.1);
+}
+
+body.dark-mode #theme-toggle {
+    color: #bbb;
+    /* Elimina la sombra del solecito en tema oscuro */
+    box-shadow: none;
+}
+
+/* Animación del solecito */
+#theme-icon {
+    transition: transform 0.5s ease-in-out;
+    display: inline-block;
+}
+
+#theme-icon.sun {
+    transform: rotate(0deg);
+}
+
+#theme-icon.moon {
+    transform: rotate(360deg);
+}
+
+/* Clase para activar la rotación */
+#theme-toggle.rotate #theme-icon {
+    transform: rotate(360deg);
+}
+
+/* Estilo para el SVG de la luna (inicialmente oculto)*/
+#theme-icon .moon {
+    display: none;
+}
+
+/* Secciones de la Página (sin cambios) */
+.seccion {
+    padding: 50px;
+    text-align: center;
+}
+
+/* Estilos diferentes para cada sección (ejemplo) */
+#seccion1 { background-color: #f0f0f0; }
+#seccion2 { background-color: #e0e0e0; }
+#seccion3 { background-color: #d0d0d0; }
+#seccion4 { background-color: #c0c0c0; }
+#seccion5 { background-color: #b0b0b0; }
+#seccion6 { background-color: #a0a0a0; }
+#seccion7 { background-color: #909090; }
+#seccion8 { background-color: #808080; }
+#seccion9 { background-color: #707070; }
+#seccion10 { background-color: #606060; }
+
+/* Media Query para Dispositivos Móviles */
+@media (max-width: 768px) {
+    .menu {
+        width: 90%;
+        height: 100vh;
+        padding-top: 50px;
+    }
+
+    .menu-toggle {
+        top: 15px;
+        right: 15px;
+    }
+
+}

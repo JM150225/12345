@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>FRM-POR GOOGLE iA</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú Flotante con Anclas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Botón del Menú Flotante -->
+    <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Menú Flotante -->
+    <nav class="menu">
+        <ul>
+          <h1>Solicitud de Empleo</h1>
+    <p>Menú de Secciones.</p>
+            <li><a href="#section1">Datos-Personales</a></li>
+            <li><a href="#section2">Documentación</a></li>
+            <li><a href="#section3">Estado-Salud-HP</a></li>
+            <li><a href="#section4">Datos-Familiares</a></li>
+            <li><a href="#section5">Escolaridad</a></li>
+            <li><a href="#section6">Conocimientos-Generales</a></li>
+            <li><a href="#section7">Sección-Empleos</a></li>
+            <li><a href="#section8">Referencias-Personales</a></li>
+            <li><a href="#section9">Datos-Generales</a></li>
+            <li><a href="#section10">Datos-Económicos</a></li>
+        </ul>
+      <!DOCTYPE html>
+<html>
+<head>
+    <title>Theme Switcher</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="theme-toggle">
+        <span id="theme-icon">☀️</span>
+    </button>
+
+    <h1>Tema (Dia-Noche)</h1>
+    <p>Tecnología desarrollada por Creative JM.</p>
+
+    <script src="script.js"></script>
+</body>
+</html>
+    </nav>
+    <title>Solicitud de Empleo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Solicitud de Empleo</h1>
+<label>
+    Fecha:(Se integra en automático en tu Documento PDF)
+    <p id="currentDate"></p>
+  </label>
+  <br>
+  <label>
+    <!-- Otros elementos de tu formulario aquí -->
+  </label>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const currentDateElement = document.getElementById("currentDate");
+      const months = [
+        "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+        "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
+      ];
+      const now = new Date();
+      const formattedDate = `${now.getDate()} de ${months[now.getMonth()]} del ${now.getFullYear()}`;
+      currentDateElement.textContent = formattedDate;
+    }); //
+  </script>
+      ••••••••
+        <form id="jobForm">
+            <section1>
+              <section id="section1" class="section">
+                <h2>Datos Personales</h2>
+                <div class="form-group">
+                    <label for="apellidoPaterno">Apellido Paterno:</label>
+                    <input type="text" id="apellidoPaterno" name="apellidoPaterno">
+                </div>
+
+                <div class="form-group">
+                    <label for="apellidoMaterno">Apellido Materno:</label>
+                    <input type="text" id="apellidoMaterno" name="apellidoMaterno">
+                </div>
+
+                <div class="form-group">
+                    <label for="nombres">Nombre(s):</label>
+                    <input type="text" id="nombres" name="nombres">
+                </div>
+
+                <div class="form-group">
+                    <label for="edad">Edad:</label>
+                    <input type="number" id="edad" name="edad" min="15" max="55">
+                </div>
+
+                <div class="form-group">
+                    <label for="direccion">Dirección:</label>
+                    <input type="text" id="direccion" name="direccion">
+                </div>
+
+                <div class="form-group">
+                    <label for="colonia">Colonia:</label>
+                    <input type="text" id="colonia" name="colonia">
+                </div>
+
+                <div class="form-group">
+                    <label for="codigoPostal">Código Postal:</label>
+                    <input type="number" id="codigoPostal" name="codigoPostal" pattern="[0-9]{5}" title="Ingrese un código postal válido de 5 dígitos">
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Teléfono:</label>
+                    <div class="phone-container">
+                        <select id="codigoPais" name="codigoPais">
+                            <option value="+1">+1 (USA/Canadá)</option>
+                            <option value="+52">+52 (México)</option>
+                            <!-- Agrega más códigos de país aquí -->
+                        </select>
+                        <input type="tel" id="telefono" name="telefono" pattern="[0-9]+" title="Ingrese solo números">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="sexo">Sexo:</label>
+                    <select id="sexo" name="sexo">
+                        <option value="hombre">Hombre</option>
+                        <option value="mujer">Mujer</option>
+                        <option value="trans">Trans</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Lugar de Nacimiento:</label>
+                    <div class="lugar-nacimiento">
+                        <input type="text" id="ciudadNacimiento" name="ciudadNacimiento" placeholder="Ciudad">
+                        <input type="text" id="estadoNacimiento" name="estadoNacimiento" placeholder="Estado">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Fecha de Nacimiento:</label>
+                    <div class="fecha-nacimiento">
+                        <select id="diaNacimiento" name="diaNacimiento"></select>
+                        <select id="mesNacimiento" name="mesNacimiento">
+                            <option value="1">Enero</option>
+                            <option value="2">Febrero</option>
+                            <option value="3">Marzo</option>
+                            <option value="4">Abril</option>
+                            <option value="5">Mayo</option>
+                            <option value="6">Junio</option>
+                            <option value="7">Julio</option>
+                            <option value="8">Agosto</option>
+                            <option value="9">Septiembre</option>
+                            <option value="10">Octubre</option>
+                            <option value="11">Noviembre</option>
+                            <option value="12">Diciembre</option>
+                        </select>
+                        <select id="anioNacimiento" name="anioNacimiento"></select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="nacionalidad">Nacionalidad:</label>
+                    <select id="nacionalidad" name="nacionalidad">
+                        <option value="mexicano">Mexicano</option>
+                        <option value="extranjero">Extranjero</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="viveCon">¿Vive con?:</label>
+                    <select id="viveCon" name="viveCon">
+                        <option value="padres">Sus padres</option>
+                        <option value="familia">Su familia</option>
+                        <option value="parientes">Parientes</option>
+                        <option value="solitario">Solitario@</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="estatura">Estatura (cm):</label>
+                    <input type="text" id="estatura" name="estatura" pattern="[0-9.]+" title="Ingrese solo números y puntos">
+                </div>
+
+                <div class="form-group">
+                    <label for="peso">Peso (kg):</label>
+                    <input type="number" id="peso" name="peso">
+                </div>
+
+                <div class="form-group">
+                    <label for="emailPersonal">Correo Electrónico Personal:</label>
+                    <input type="email" id="emailPersonal" name="emailPersonal">
+                </div>
+
+                <div class="form-group">
+                    <label for="dependientes">Personas que dependen del aspirante:</label>
+                    <select id="dependientes" name="dependientes">
+                        <option value="hijos">Hijos</option>
+                        <option value="conyuge">Cónyuge</option>
+                        <option value="padres">Padres</option>
+                        <option value="nadie">Nadie</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="estadoCivil">Estado Civil:</label>
+                    <select id="estadoCivil" name="estadoCivil">
+                        <option value="soltero">Soltero</option>
+                        <option value="casado">Casado</option>
+                        <option value="unionLibre">Unión Libre</option>
+                    </select>
+                </div>
+            </section1>
+            </section>
+∆∆∆
+            <section2>
+              <section id="section2" class="section">
+                <h2>Documentación</h2>
+
+                <div class="form-group">
+                    <label for="curp">Clave Única de Registro de Población (CURP):</label>
+                    <input type="text" id="curp" name="curp" maxlength="18" oninput="this.value = this.value.toUpperCase()">
+                </div>
+
+                <div class="form-group">
+                    <label for="rfc">Reg. Fed. de Contribuyente No. (RFC):</label>
+                    <input type="text" id="rfc" name="rfc" maxlength="13" oninput="this.value = this.value.toUpperCase()">
+                </div>
+
+                <div class="form-group">
+                    <label for="nss">Número de Seguridad Social:</label>
+                    <input type="number" id="nss" name="nss">
+                </div>
+
+                <div class="form-group">
+                    <label for="afore">AFORE:</label>
+                    <input type="text" id="afore" name="afore">
+                </div>
+
+                <div class="form-group">
+                    <label for="cartilla">Cartilla Servicio Militar No.:</label>
+                    <input type="text" id="cartilla" name="cartilla">
+                </div>
+
+                <div class="form-group">
+                    <label for="pasaporte">Pasaporte:</label>
+                    <input type="text" id="pasaporte" name="pasaporte">
+                </div>
+
+                <div class="form-group">
+                    <label for="documentoExtranjero">Si es extranjero, ¿qué documento le permite trabajar en el país?</label>
+                    <select id="documentoExtranjero" name="documentoExtranjero">
+                        <option value="">Seleccione un documento</option>
+                        <option value="fm3">FM3</option>
+                        <option value="fm2">FM2</option>
+                        <option value="permisoTrabajo">Permiso de Trabajo</option>
+                        <option value="residenciaPermanente">Residencia Permanente</option>
+                        <!-- Agrega más opciones según sea necesario -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="licenciaManejo">Licencia de Manejo:</label>
+                    <select id="licenciaManejo" name="licenciaManejo">
+                        <option value="">Seleccione una opción</option>
+                        <option value="si">Sí</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="claseLicencia">Clase y Número de Licencia:</label>
+                    <input type="text" id="claseLicencia" name="claseLicencia">
+                </div>
+            </section2>
+                  </section>
+∆∆∆
+            <section3>
+              <section id="section3" class="section">
+                <h2>Estado de Salud y Hábitos Personales</h2>
+
+                <div class="form-group">
+                    <label for="estadoSalud">Actualmente, ¿cómo se encuentra de estado de salud?</label>
+                    <select id="estadoSalud" name="estadoSalud">
+                        <option value="bueno">Bueno</option>
+                        <option value="regular">Regular</option>
+                        <option value="malo">Malo</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>¿Padece alguna enfermedad crónica?</label>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="enfermedadCronica" value="si"> Sí
+                        </label>
+                        <label>
+                            <input type="radio" name="enfermedadCronica" value="no"> No
+                        </label>
+                    </div>
+                    <input type="text" id="cualEnfermedad" name="cualEnfermedad" placeholder="¿Cuál es su enfermedad crónica?" maxlength="59" style="display: none;">
+                    <small>Máximo 5 palabras, 10 letras por palabra (espacios incluidos)</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="deportePractica">¿Qué deporte practica?</label>
+                    <input type="text" id="deportePractica" name="deportePractica" maxlength="39">
+                    <small>Máximo 3 palabras, 10 letras por palabra (espacios incluidos)</small>
+                </div>
+
+                 <div class="form-group">
+                    <label for="clubSocial">¿Pertenece a algún club social o deportivo?</label>
+                    <select id="clubSocial" name="clubSocial">
+                        <option value="si">Sí</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="pasatiempo">¿Cuál es su pasatiempo favorito?</label>
+                    <input type="text" id="pasatiempo" name="pasatiempo" maxlength="49">
+                    <small>Máximo 4 palabras, 10 letras por palabra (espacios incluidos)</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="metaVida">¿Cuál es su meta en la vida?</label>
+                    <input type="text" id="metaVida" name="metaVida" maxlength="109">
+                    <small>Máximo 10 palabras, 10 letras por palabra (espacios incluidos)</small>
+                </div>
+            </section3>
+              </section>
+∆∆∆
+            <section4>
+              <section id="section4" class="section">
+                <h2>Datos Familiares</h2>
+
+                <h3>Datos del Padre</h3>
+                <div class="form-group">
+                    <label for="nombrePadre">¿Nombre de tu padre?</label>
+                    <input type="text" id="nombrePadre" name="nombrePadre">
+                </div>
+                <div class="form-group">
+                    <label>¿Dirección de tu padre?</label>
+                    <div class="direccion">
+                        <input type="text" id="callePadre" name="callePadre" placeholder="Calle">
+                        <input type="text" id="coloniaPadre" name="coloniaPadre" placeholder="Colonia">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="ocupacionPadre">¿Ocupación de tu padre?</label>
+                    <input type="text" id="ocupacionPadre" name="ocupacionPadre">
+                </div>
+                <div class="form-group">
+                    <label for="vivePadre">¿Aún vive?</label>
+                    <select id="vivePadre" name="vivePadre">
+                        <option value="si">Sí</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                <h3>Datos de la Madre</h3>
+                <div class="form-group">
+                    <label for="nombreMadre">¿Nombre de tu Madre?</label>
+                    <input type="text" id="nombreMadre" name="nombreMadre">
+                </div>
+                <div class="form-group">
+                    <label>¿Dirección de tu Madre?</label>
+                    <div class="direccion">
+                        <input type="text" id="calleMadre" name="calleMadre" placeholder="Calle">
+                        <input type="text" id="coloniaMadre" name="coloniaMadre" placeholder="Colonia">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="ocupacionMadre">¿Ocupación de tu Madre?</label>
+                    <input type="text" id="ocupacionMadre" name="ocupacionMadre">
+                </div>
+                <div class="form-group">
+                    <label for="viveMadre">¿Aún vive?</label>
+                    <select id="viveMadre" name="viveMadre">
+                        <option value="si">Sí</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                  <h3>Datos del Esposo/a</h3>
+                <div class="form-group">
+                    <label for="nombreConyuge">¿Nombre de tu Esposo/a?</label>
+                    <input type="text" id="nombreConyuge" name="nombreConyuge">
+                </div>
+                <div class="form-group">
+                    <label>¿Dirección de tu Esposo/a?</label>
+                    <div class="direccion">
+                        <input type="text" id="calleConyuge" name="calleConyuge" placeholder="Calle">
+                        <input type="text" id="coloniaConyuge" name="coloniaConyuge" placeholder="Colonia">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="ocupacionConyuge">¿Ocupación de tu Esposo/a?</label>
+                    <input type="text" id="ocupacionConyuge" name="ocupacionConyuge">
+                </div>
+                <div class="form-group">
+                    <label for="viveConyuge">¿Aún vive?</label>
+                    <select id="viveConyuge" name="viveConyuge">
+                        <option value="si">Sí</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="tieneHijos">¿Tiene hijos?</label>
+                    <select id="tieneHijos" name="tieneHijos">
+                        <option value="no">No</option>
+                        <option value="si">Sí</option>
+                    </select>
+                </div>
+
+                <div id="datosHijos" style="display: none;">
+                    <div class="form-group">
+                        <label for="cantidadHijos">¿Cuántos?</label>
+                        <select id="cantidadHijos" name="cantidadHijos">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                        </select>
+                    </div>
+                    <div id="hijosContainer">
+                        <!-- Aquí se agregarán dinámicamente los campos para cada hijo -->
+                    </div>
+                </div>
+            </section4>
+              </section>
+∆∆∆
+            <section5>
+              <section id="section5" class="section">
+                <h2>Escolaridad</h2>
+                <h3>Marca las casillas de todos los estudios que ya tienes realizados.</h3>
+
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="primariaCheck" name="estudiosRealizados" value="primaria"> Primaria
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="secundariaCheck" name="estudiosRealizados" value="secundaria"> Secundaria
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="preparatoriaCheck" name="estudiosRealizados" value="preparatoria"> Preparatoria
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="universidadCheck" name="estudiosRealizados" value="universidad"> Universidad
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="adicionalesCheck" name="estudiosRealizados" value="adicionales"> Institución de estudios adicionales
+                    </label>
+                </div>
+
+                <div id="seccionesEscolaridad">
+                    <!-- Aquí se insertarán dinámicamente las secciones de escolaridad -->
+                </div>
+<h3>¿Actualmente te encuentras estudiando?</h3>
+                <div class="form-group">
+                    <label>
+                        <input type="radio" id="estudiaSi" name="estudiaActualmente" value="si"> Sí
+                    </label>
+                    <label>
+                        <input type="radio" id="estudiaNo" name="estudiaActualmente" value="no"> No
+                    </label>
+                </div>
+
+                <div id="seccionEstudiosActuales" style="display: none;">
+                    <h3>Sección de estudios actuales</h3>
+                    <div class="form-group">
+                        <label for="institucionActual">¿Nombre de la institución?</label>
+                        <input type="text" id="institucionActual" name="institucionActual">
+                    </div>
+                    <div class="form-group">
+                        <label for="direccionActual">¿Dirección de la institución?</label>
+                        <input type="text" id="direccionActual" name="direccionActual">
+                    </div>
+                    <div class="form-group">
+                        <label for="fechaInicioActual">¿Fecha en qué comenzaste tu plan de estudio actual?</label>
+                        <input type="number" id="fechaInicioActual" name="fechaInicioActual" maxlength="4">
+                    </div>
+                    <div class="form-group">
+                        <label for="fechaFinActual">¿Cuándo terminas tu periodo de estudio?</label>
+                        <input type="date" id="fechaFinActual" name="fechaFinActual">
+                    </div>
+                </div>
+            </section5>
+
+            </section>
+∆∆∆
+            <section>
+              <section id="section6" class="section">
+                <h2>Conocimientos generales</h2>
+
+                        <div class="form-group">
+            <label for="idiomas">¿Idiomas que dominas?</label>
+            <input type="text" id="idiomas" name="idiomas">
+        </div>
+
+        <div class="form-group">
+            <label for="nivelIdioma">Nivel de dominio del idioma:</label>
+            <select id="nivelIdioma" name="nivelIdioma">
+                <option value="">Seleccione un nivel</option>
+                <option value="A1">A1 (Nivel básico): Conocimientos muy básicos</option>
+                <option value="A2">A2 (Nivel elemental): Conocimientos básicos</option>
+                <option value="B1">B1 (Nivel intermedio): Conocimientos intermedios</option>
+                <option value="B2">B2 (Nivel avanzado): Conocimientos avanzados</option>
+                <option value="C1">C1 (Nivel alto): Conocimientos muy avanzados</option>
+                <option value="C2">C2 (Nivel proficiente): Conocimientos casi nativos</option>
+            </select>
+        </div>
+                <div class="form-group">
+                    <label for="funcionesOficina">¿Qué funciones de oficina dominas?</label>
+                    <input type="text" id="funcionesOficina" name="funcionesOficina" maxlength="109">
+                    <small>Máximo 10 palabras, 10 letras por palabra (espacios incluidos)</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="maquinasOficina">¿Máquinas de oficina o taller que sabes utilizar?</label>
+                    <input type="text" id="maquinasOficina" name="maquinasOficina" maxlength="69">
+                    <small>Máximo 6 palabras, 10 letras por palabra (espacios incluidos)</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="software">¿Software, Programas, y sistema operativo que sabes utilizar?</label>
+                    <input type="text" id="software" name="software" maxlength="89">
+                    <small>Máximo 8 palabras, 10 letras por palabra (espacios incluidos)</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="otrasFunciones">¿Otras funciones u oficios que domines?</label>
+                    <input type="text" id="otrasFunciones" name="otrasFunciones" maxlength="129">
+                    <small>Máximo 12 palabras, 10 letras por palabra (espacios incluidos)</small>
+             ∆∆∆     
+    <section id="section7" class="section">
+        <h2>Sección de Empleos</h2>
+
+        <section>
+            <h3>¿Cuántos Empleos deseas integrar en tu solicitud?</h3>
+            <div class="form-group">
+                <select id="cantidadEmpleos" name="cantidadEmpleos">
+                    <option value="1">Un Empleo</option>
+                    <option value="2">Dos Empleos</option>
+                    <option value="3">Tres Empleos</option>
+                    <option value="4">Cuatro Empleos</option>
+                </select>
+            </div>
+
+            <div id="seccionesEmpleo">
+                <!-- Aquí se insertarán dinámicamente las secciones de empleo -->
+            </div>
+
+            <div class="form-group">
+                <label>¿Se pueden solicitar informes a las empresas relacionados a tus servicios prestados?</label>
+                <select id="informesEmpresas" name="informesEmpresas">
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+
+            <div id="razonNoInformes" class="form-group" style="display: none;">
+                <label for="razonNoInformesText">¿Por qué No?</label>
+                <textarea id="razonNoInformesText" name="razonNoInformesText" placeholder="Escribe la razón"></textarea>
+            </div>
+        </section>
+    </div>
+           ∆∆∆       
+            <section>
+              <section id="section8" class="section">
+                <h2>Referencias personales</h2>
+                <h3>¿Cuántas referencias deseas integrar en tu solicitud?</h3>
+                <div class="form-group">
+                    <select id="cantidadReferencias" name="cantidadReferencias">
+                        <option value="1">Una referencia</option>
+                        <option value="2">Dos referencias</option>
+                        <option value="3">Tres referencias</option>
+                    </select>
+                </div>
+
+                <div id="seccionesReferencias">
+                    <!-- Aquí se insertarán dinámicamente las secciones de referencias -->
+                </div>
+            </section>
+<!-- partial -->
+  <script  src="./script.js"></script>
+∆∆∆
+           
+                    </section>
+
+    <title>Datos Generales</title>
+    <style>
+        .oculto {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<section9>
+  <section id="section9" class="section">
+    <h2>Datos Generales</h2>
+
+    <form id="formularioDatos">
+
+        <div>
+            <label for="comoEntero">1. ¿Cómo se enteró de esta vacante de empleo?</label>
+            <input type="text" id="comoEntero" name="comoEntero">
+        </div>
+
+        <div>
+            <label>2. ¿Algún pariente trabaja en esta empresa?</label>
+            <label><input type="radio" name="pariente" value="si" id="parienteSi"> Sí</label>
+            <label><input type="radio" name="pariente" value="no" id="parienteNo"> No</label>
+        </div>
+        <div id="divNombrePariente" class="oculto">
+            <label for="nombrePariente">Nombre del pariente:</label>
+            <input type="text" id="nombrePariente" name="nombrePariente">
+        </div>
+
+        <div>
+            <label>3. ¿Ha sido afianzado?</label>
+            <label><input type="radio" name="afianzado" value="si" id="afianzadoSi"> Sí</label>
+            <label><input type="radio" name="afianzado" value="no" id="afianzadoNo"> No</label>
+        </div>
+        <div id="divNombreEntidadAfianzadora" class="oculto">
+            <label for="nombreEntidadAfianzadora">Nombre de la entidad:</label>
+            <input type="text" id="nombreEntidadAfianzadora" name="nombreEntidadAfianzadora">
+        </div>
+
+        <div>
+            <label>4. ¿Ha estado afiliado a algún sindicato?</label>
+            <label><input type="radio" name="sindicato" value="si" id="sindicatoSi"> Sí</label>
+            <label><input type="radio" name="sindicato" value="no" id="sindicatoNo"> No</label>
+        </div>
+        <div id="divNombreSindicato" class="oculto">
+            <label for="nombreSindicato">Nombre de la entidad:</label>
+            <input type="text" id="nombreSindicato" name="nombreSindicato">
+        </div>
+
+        <div>
+            <label>5. ¿Tiene seguro de vida?</label>
+            <label><input type="radio" name="seguroVida" value="si" id="seguroVidaSi"> Sí</label>
+            <label><input type="radio" name="seguroVida" value="no" id="seguroVidaNo"> No</label>
+        </div>
+        <div id="divSeguroVida" class="oculto">
+            <label for="nombreEntidadSeguro">Nombre de la entidad:</label>
+            <input type="text" id="nombreEntidadSeguro" name="nombreEntidadSeguro"><br>
+            <label for="sumaAsegurada">Suma asegurada:</label>
+            <input type="text" id="sumaAsegurada" name="sumaAsegurada">
+        </div>
+
+        <div>
+            <label>6. ¿Podría viajar?</label>
+            <label><input type="radio" name="puedeViajar" value="si" id="puedeViajarSi"> Sí</label>
+            <label><input type="radio" name="puedeViajar" value="no" id="puedeViajarNo"> No</label>
+        </div>
+        <div id="divRazonesViaje" class="oculto">
+            <label for="razonesViaje">¿Razones?:</label>
+            <textarea id="razonesViaje" name="razonesViaje"></textarea>
+        </div>
+
+        <div>
+            <label>7. ¿Estaría dispuest@ a cambiar su lugar de residencia?</label>
+            <label><input type="radio" name="cambioResidencia" value="si" id="cambioResidenciaSi"> Sí</label>
+            <label><input type="radio" name="cambioResidencia" value="no" id="cambioResidenciaNo"> No</label>
+        </div>
+        <div id="divRazonesResidencia" class="oculto">
+            <label for="razonesResidencia">¿Razones?:</label>
+            <textarea id="razonesResidencia" name="razonesResidencia"></textarea>
+        </div>
+
+        <div>
+            <label for="fechaIncorporacion">8. ¿En qué fecha podría presentarse a trabajar?</label>
+            <input type="text" id="fechaIncorporacion" name="fechaIncorporacion">
+        </div>
+    <script src="script.js"></script>
+      
+      
+      
+      <section id="section10" class="section">
+<h2>Datos Económicos</h2>
+<section id="section10" class="section">
+    <title>Formulario de Ingresos y Gastos</title>section
+    <style>
+        .oculto {
+            display: none;
+        }
+        .input-con-simbolo {
+            position: relative;
+            display: inline-block;
+        }
+
+        .input-con-simbolo input {
+            padding-right: 25px; /* Espacio para el símbolo */
+            text-align: right; /* Alinea el texto a la derecha */
+        }
+
+        .input-con-simbolo .simbolo {
+            position: absolute;
+            top: 50%;
+            right: 5px;
+            transform: translateY(-50%);
+            pointer-events: none; /* Para que no interfiera con el clic en el input */
+        }
+
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type="number"] {
+            -moz-appearance: textfield;
+        }
+
+        input::placeholder {
+            color: #aaa; /* Color tenue para el placeholder */
+        }
+    </style>
+</head>
+<body>
+
+    <form id="formulario">
+
+        <div>
+            <p>1. ¿Tiene usted otros ingresos?  
+            <label><input type="radio" name="otrosIngresos" id="otrosIngresosSi"> Sí</label>  
+            <label><input type="radio" name="otrosIngresos" id="otrosIngresosNo" checked> No</label></p>
+
+            <div id="divImporteOtrosIngresos" class="oculto">
+                <input type="text" id="descripcionOtrosIngresos" placeholder="Descríbalos"><br><br>
+                <div class="input-con-simbolo">
+                    <input type="number" id="importeOtrosIngresos" placeholder="Importe mensual">
+                    <span class="simbolo">$</span>
+                </div>
+                <br><br>
+            </div>
+        </div>
+
+        <div>
+            <p>2. ¿Su cónyuge trabaja?  
+            <label><input type="radio" name="conyugeTrabaja" id="conyugeTrabajaSi"> Sí</label>  
+            <label><input type="radio" name="conyugeTrabaja" id="conyugeTrabajaNo" checked> No</label></p>
+
+            <div id="divConyugeTrabaja" class="oculto">
+                <input type="text" id="dondeConyugeTrabaja" placeholder="¿Dónde?"><br><br>
+                <div class="input-con-simbolo">
+                    <input type="number" id="percepcionConyuge" placeholder="Percepción mensual">
+                    <span class="simbolo">$</span>
+                </div>
+                <br><br>
+            </div>
+        </div>
+
+        <div>
+            <p>3. ¿Vive en casa propia?  
+            <label><input type="radio" name="casaPropia" id="casaPropiaSi"> Sí</label>  
+            <label><input type="radio" name="casaPropia" id="casaPropiaNo" checked> No</label></p>
+
+            <div id="divValorCasa" class="oculto">
+                <div class="input-con-simbolo">
+                    <input type="number" id="valorCasa" placeholder="Valor Aproximado">
+                    <span class="simbolo">$</span>
+                </div>
+                <br><br>
+            </div>
+        </div>
+
+        <div>
+            <p>4. ¿Paga renta?  
+            <label><input type="radio" name="pagaRenta" id="pagaRentaSi"> Sí</label>  
+            <label><input type="radio" name="pagaRenta" id="pagaRentaNo" checked> No</label></p>
+
+            <div id="divRentaMensual" class="oculto">
+                <div class="input-con-simbolo">
+                    <input type="number" id="rentaMensual" placeholder="Renta Mensual">
+                    <span class="simbolo">$</span>
+                </div>
+                <br><br>
+            </div>
+        </div>
+
+        <div>
+            <p>5. ¿Posee automóvil propio?  
+            <label><input type="radio" name="automovilPropio" id="automovilPropioSi"> Sí</label>  
+            <label><input type="radio" name="automovilPropio" id="automovilPropioNo" checked> No</label></p>
+
+            <div id="divValorAutomovil" class="oculto">
+                <input type="text" id="marcaModeloAutomovil" placeholder="Marca y Modelo"><br><br>
+                <div class="input-con-simbolo">
+                    <input type="number" id="valorAutomovil" placeholder="Valor Aproximado">
+                    <span class="simbolo">$</span>
+                </div>
+                <br><br>
+            </div>
+        </div>
+
+        <div>
+            <p>6. ¿Tiene deudas?  
+            <label><input type="radio" name="tieneDeudas" id="tieneDeudasSi"> Sí</label>  
+            <label><input type="radio" name="tieneDeudas" id="tieneDeudasNo" checked> No</label></p>
+
+            <div id="divDeudas" class="oculto">
+                <input type="text" id="conQuienDeuda" placeholder="¿Con quién?"><br><br>
+                <div class="input-con-simbolo">
+                    <input type="number" id="importeDeudaMensual" placeholder="Importe mensual">
+                    <span class="simbolo">$</span>
+                </div>
+                <br><br>
+            </div>
+        </div>
+
+        <div>
+            <p>7. ¿Cuánto abona mensualmente?</p>
+            <div class="input-con-simbolo">
+                <input type="number" id="abonoMensual" placeholder="0.00">
+                <span class="simbolo">$</span>
+            </div>
+        </div>
+
+        <div>
+            <p>8. ¿A cuánto ascienden sus gastos mensuales?</p>
+            <div class="input-con-simbolo">
+                <input type="number" id="gastosMensuales" placeholder="0.00">
+                <span class="simbolo">$</span>
+            </div>
+        </div>
+
+      ∆∆∆
+      ••••••
+    </div>
+  <h2>Próximamente Firma Digital
+(FIN)</h2>
+</div>
+
+            <button type="button" id="generatePDF">Generar PDF</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
